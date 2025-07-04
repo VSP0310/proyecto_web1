@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Footer centrado con iconos</title>
+<style>
+  body {
+    margin: 0;
+    background: white;
+    font-family: Arial, sans-serif;
+  }
+  footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    user-select: none;
+  }
+  .footer-line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 2rem;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    margin-bottom: 0.7rem;
+  }
+  .footer-line > span {
+    white-space: nowrap;
+  }
+  .footer-line strong {
+    color: #3498db;
+    margin-right: 0.3rem;
+  }
+  .footer-line a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin: 0 0.2rem;
+  }
+  .footer-line a:hover {
+    color: #3498db;
+  }
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 0.7rem;
+  }
+  .social-icons a svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+    transition: fill 0.3s;
+  }
+  .social-icons a:hover svg {
+    fill: #3498db;
+  }
+  .footer-bottom {
+    font-size: 0.8rem;
+    color: #bbb;
+  }
+</style>
+</head>
+<body>
+
+<footer>
+  <div class="footer-line">
+    <span><strong>LEGAL:</strong>
+      <a href="#">Aviso legal</a>·
+      <a href="#">Privacidad</a>·
+      <a href="#">Cookies</a>·
+      <a href="#">Términos</a>
+    </span>
+    <span><strong>VISÍTANOS:</strong>
+      <a href="oklocalizacion.html">C/Alegría Nº 55</a>·
+      <a href="oklocalizacion.html">pulseandpause@gmail.com</a>·
+      <a href="https://wa.me/34607663214">123 456 789</a>
+    </span>
+  </div>
+
+  <div class="social-icons">
+   <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" rel="noopener noreferrer" style="display:inline-block; width: 24px; height: 24px;">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" width="24" height="24">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+    <path d="M16 11.37a4 4 0 11-4.73-4.73 4 4 0 014.73 4.73z"></path>
+    <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
+  </svg>
+</a>
+
+    </a>
+    <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer" style="display:inline-block; width: 24px; height: 24px;">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" width="24" height="24">
+    <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+  </svg>
+</a>
+    <a href="https://www.x.com/" target="_blank" aria-label="X" rel="noopener noreferrer" style="display:inline-block; width: 24px; height: 24px;">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" width="24" height="24">
+    <path d="M18 6L6 18M6 6l12 12"></path>
+  </svg>
+</a>
+  </div>
+
+  <div class="footer-bottom">&copy; 2025 Pulse and Pause · Silvia</div>
+</footer>
+
+</body>
+</html>

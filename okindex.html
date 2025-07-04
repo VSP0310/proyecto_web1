@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pulse and Pause</title>
+    <!--Estilos pagina INICIO  -->
+    <link rel="stylesheet" href="./css/pulse_pause_css.css" />
+  </head>
+
+  <body>
+   <div id="header"></div>
+    
+    <!-- contenido central -->
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <p class="eslogan">Bienvenido al espacio donde todo es posible</p>
+          <h1>Pulse & Pause</h1>
+          <p class="eslogan">Respira, sonríe, conecta y construye</p>
+          <a href="okespacios.html" class="boton-hero">Descubre tu espacio</a>
+        </div>
+      </section>
+
+      <section class="intro">
+        <h2>Un lugar donde trabajar y vivir en equilibrio</h2>
+        <p>
+          Disfruta de un coworking moderno con zonas de relax, micro gym,
+          eventos inspiradores y talleres conscientes para recargar cuerpo y
+          mente.
+        </p>
+      </section>
+    </main>
+
+   <div id="footer" class="mt-auto"></div>
+
+    <!-- Script -->
+    <script src="./js/main.js"></script>
+    <script>
+      fetch("header.html")
+      .then(res=>res.text())
+      .then(data=>document.getElementById("header").innerHTML=data);
+
+      fetch("footer.html")
+      .then(res=>res.text())
+      .then(data=>document.getElementById("footer").innerHTML=data);
+    </script>
+  </body>
+</html>

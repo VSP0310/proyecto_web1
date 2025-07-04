@@ -1,0 +1,399 @@
+/* Variables CSS para mantener consistencia */
+:root {
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --secondary-gradient: linear-gradient(45deg, #ff6b6b, #feca57);
+    --accent-color: #667eea;
+    --text-dark: #333;
+    --text-light: #666;
+    --white: #fff;
+    --neutral-light: #f8f9fa;
+    --shadow: 0 4px 15px rgba(0,0,0,0.1);
+    --border-radius: 15px;
+}
+
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+}
+
+/* Header con el mismo estilo que la página principal */
+header {
+    background: var(--primary-gradient) !important;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+header .nav-link {
+    color: white !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+header .nav-link:hover {
+    background-color: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+    color: white !important;
+}
+
+header .navbar-brand img {
+    height: 50px;
+    filter: brightness(1.1);
+}
+
+/* Hero Section */
+.hero-servicios {
+    background: linear-gradient(rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9)),
+                url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 5rem 1rem 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-servicios::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(102, 126, 234, 0.8), rgba(118, 75, 162, 0.8));
+    z-index: 1;
+}
+
+.hero-servicios .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-servicios h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-servicios h2 {
+    font-size: 1.8rem;
+    color: #feca57 !important;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.hero-servicios p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.hero-servicios .lead {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    font-weight: 300;
+    animation: fadeInUp 1s ease-out 0.9s both;
+}
+
+/* Cards mejoradas */
+.card {
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    background: white;
+    overflow: hidden;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.card-img-top {
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.card-title {
+    color: var(--accent-color);
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.card-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--secondary-gradient);
+    border-radius: 2px;
+}
+
+.card-text {
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card ul li {
+    padding: 0.5rem 0;
+    color: var(--text-light);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.card ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #28a745;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Tabla mejorada */
+.table-container {
+    margin-top: 4rem;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow-x: auto;
+    animation: fadeInUp 1s ease-out;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+}
+
+th {
+    background: var(--primary-gradient);
+    color: white;
+    font-weight: 600;
+    padding: 1.5rem;
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+td {
+    padding: 1.5rem;
+    border-bottom: 1px solid #eee;
+    color: var(--text-dark);
+}
+
+tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+tr:hover {
+    background: linear-gradient(90deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    transform: scale(1.01);
+    transition: all 0.3s ease;
+}
+
+td strong {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* Footer mejorado */
+footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%) !important;
+    color: white !important;
+    margin-top: 5rem;
+    padding: 3rem 0 1rem;
+}
+
+footer h6 {
+    color: #3498db;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+footer h6::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: #3498db;
+    border-radius: 1px;
+}
+
+footer a {
+    color: #ecf0f1 !important;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 0.3rem 0;
+    display: inline-block;
+}
+
+footer a:hover {
+    color: #3498db !important;
+    transform: translateX(5px);
+}
+
+footer .border-top {
+    border-color: #495057 !important;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efecto de aparición para las cards */
+.card {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+
+/* Decoración adicional */
+.container {
+    position: relative;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(45deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-servicios h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-servicios h2 {
+        font-size: 1.4rem;
+    }
+    
+    .hero-servicios p {
+        font-size: 1rem;
+    }
+    
+    .card-body {
+        padding: 1.5rem;
+    }
+    
+    .table-container {
+        margin-top: 2rem;
+    }
+    
+    th, td {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    header .nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    header .nav-link {
+        text-align: center;
+        margin: 0.2rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-servicios {
+        padding: 3rem 1rem 2rem;
+    }
+    
+    .hero-servicios h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-servicios h2 {
+        font-size: 1.2rem;
+    }
+    
+    .card-title {
+        font-size: 1.2rem;
+    }
+    
+    th, td {
+        padding: 0.8rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Efecto de scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Mejora para accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

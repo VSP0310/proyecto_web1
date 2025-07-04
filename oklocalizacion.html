@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visitanos</title>
+    <link rel="stylesheet" href="./css/style_localizacion.css" />
+  </head>
+  <body>
+    <div id="header"></div>
+    <main>
+  <div class="contenido">
+
+    <div class="texto">
+      <h2>¿Dónde estamos?</h2>
+      <p>Nos encanta escucharte. Si tienes dudas, sugerencias o simplemente quieres saludarnos, este es el lugar adecuado.</p>
+      <p>Estamos ubicados en el corazón de la ciudad, listos para atenderte de manera presencial o virtual.</p>
+      <p>Puedes visitarnos, llamarnos o escribirnos usando este formulario. ¡Tu opinión es muy importante para nosotros!</p>
+    </div>
+
+    <div class="mapa">
+      <h2>Ubicación</h2>
+     
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2981.9017688256536!2d-0.8758923231574971!3d41.636254671269555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5915023ca99a6f%3A0xc5746797d9318a13!2sC%2F%20Alegr%C3%ADa%2C%2050008%20Zaragoza!5e0!3m2!1ses!2ses!4v1750871777924!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" 
+        
+      </iframe>
+    </div>
+
+  </div>
+
+    <h2>Deja tu mensaje</h2>
+
+    <form id="formulario" novalidate>
+      <label>Nombre completo:</label>
+      <input type="text" id="nombre" />
+      <div id="errorNombre" class="error"></div>
+
+      <label>Email:</label>
+      <input type="email" id="email" />
+      <div id="errorEmail" class="error"></div>
+
+      <label for="text">Mensaje</label>
+      <textarea id="mensaje" rows="4"></textarea>
+      <div id="errorMensaje" class="error"></div> <!-- Asegúrate de que el ID coincida con el del JavaScript --><!--INCLUIR EN JAVASCRIPT-->
+
+      
+      <button type="submit">Enviar</button>
+    </form>
+
+    <p id="mensajeFinal" class="success"></p>
+    
+    </main>
+    
+  </body>
+    <div id="footer" class="mt-auto"></div>
+
+    <!-- Script -->
+    <script src="./js/main.js"></script>
+    <script>
+      fetch("header.html")
+      .then(res=>res.text())
+      .then(data=>document.getElementById("header").innerHTML=data);
+
+      fetch("footer.html")
+      .then(res=>res.text())
+      .then(data=>document.getElementById("footer").innerHTML=data);
+    </script>
+    <script src="./js/val_localizacion.js"></script>
+</html>
